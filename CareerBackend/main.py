@@ -11,6 +11,7 @@ def root():
 
 @app.route('/getVacancies')
 def getVacancies():
+    DataWorker.createTable()
     name = request.args.get('name')
     exp = request.args.get('experience')
     sch = request.args.get('schedule')
@@ -21,12 +22,6 @@ def getVacancies():
 def getStats():
     return DataWorker.getMost()
 
-if __name__ == '__main__':
-    if DataWorker.createTable():
-        print('Database created or founded old')
-        app.run(debug=True, port=1034)
-    else:
-        print("CAN'T CREATE OR FIND DATABASE!")
 
 
 

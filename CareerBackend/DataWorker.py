@@ -15,11 +15,7 @@ def createTable():
 
         cursor = connection.cursor()
 
-        cursor.execute('CREATE TABLE IF NOT EXISTS requests ('
-                       'requestText VARCHAR(255) NOT NULL,'
-                       'schedule VARCHAR(255) NOT NULL,'
-                       'experience VARCHAR(255) NOT NULL,'
-                       'found VARCHAR(255) NOT NULL)')
+        cursor.execute('CREATE TABLE `requests` (requestText VARCHAR(255), schedule VARCHAR(255), experience VARCHAR(255), found INT)')
 
         connection.commit()
         connection.close()
@@ -74,12 +70,11 @@ def getMost():
 
         cursor.execute("SELECT * FROM requests ORDER BY found DESC")
 
-        data = cursor.fetchall()
+        data = cursor.fetchall()[0]
 
-        connection.commit()
         connection.close()
 
-        s = data[0] + ", "
+        s = str(data[0])+ ", "
 
         match data[1]:
             case "None":
@@ -95,7 +90,7 @@ def getMost():
             case "flyInFlyOut":
                 sch = 'График: Вахта'
 
-        s+=sch + ', '
+        s+=str(sch) + ', '
 
         match data[2]:
             case 'noExperience':
@@ -107,7 +102,7 @@ def getMost():
             case 'moreThan6':
                 exp = 'Более 6'
 
-        s+=exp
+        s+=str(exp)
 
         return [s, data[3]]
     except Exception as e:
