@@ -6,10 +6,11 @@ def createTable():
     try:
 
         connection = mysql.connector.connect(
-            host="http://mysql_database",
+            host="mysql",
             user='user',
             password='1234',
-            database='CareerFinder'
+            database='CareerFinder',
+            port="3306"
         )
 
         cursor = connection.cursor()
@@ -26,7 +27,7 @@ def createTable():
         return True
     except Exception as e:
         print(e)
-        return False
+        return e
 
 
 
@@ -39,10 +40,11 @@ def createRecord(name, sch, exp, found):
 
     try:
         connection = mysql.connector.connect(
-            host="http://mysql_database",
+            host="mysql",
             user='user',
             password='1234',
-            database='CareerFinder'
+            database='CareerFinder',
+            port="3306"
         )
 
         cursor = connection.cursor()
@@ -55,23 +57,24 @@ def createRecord(name, sch, exp, found):
         return True
     except Exception as e:
         print(e)
-        return False
+        return e
 
 
 def getMost():
     try:
         connection = mysql.connector.connect(
-            host="http://mysql_database",
+            host="mysql",
             user='user',
             password='1234',
-            database='CareerFinder'
+            database='CareerFinder',
+            port="3306"
         )
 
         cursor = connection.cursor()
 
-        data = cursor.execute("SELECT * FROM requests ORDER BY found DESC")
+        cursor.execute("SELECT * FROM requests ORDER BY found DESC")
 
-        print(data)
+        data = cursor.fetchall()
 
         connection.commit()
         connection.close()
@@ -109,4 +112,4 @@ def getMost():
         return [s, data[3]]
     except Exception as e:
         print(e)
-        return False
+        return e
