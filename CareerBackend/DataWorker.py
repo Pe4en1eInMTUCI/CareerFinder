@@ -3,7 +3,7 @@ import sqlite3
 
 def createTable():
     try:
-        connection = sqlite3.connect('vacancies.db')
+        connection = sqlite3.connect('./vacancies.db')
         cursor = connection.cursor()
 
         cursor.execute('CREATE TABLE IF NOT EXISTS requests ('
@@ -30,7 +30,7 @@ def createRecord(name, sch, exp, found):
     found = int(found)
 
     try:
-        connection = sqlite3.connect('vacancies.db')
+        connection = sqlite3.connect('./vacancies.db')
         cursor = connection.cursor()
 
         cursor.execute("INSERT INTO requests (requestText, schedule, experience, found) VALUES (?, ?, ?, ?)", (name, sch, exp, found))
@@ -46,7 +46,7 @@ def createRecord(name, sch, exp, found):
 
 def getMost():
     try:
-        connection = sqlite3.connect('vacancies.db')
+        connection = sqlite3.connect('./vacancies.db')
         cursor = connection.cursor()
 
         data = cursor.execute("SELECT * FROM requests ORDER BY found DESC").fetchone()

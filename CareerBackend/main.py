@@ -1,9 +1,11 @@
+import logging
 
 from flask import Flask, request
 import parser
 import DataWorker
 
 app = Flask("main")
+logger = logging.getLogger(__name__)
 
 @app.route('/')
 def root():
@@ -23,5 +25,10 @@ def getStats():
     return DataWorker.getMost()
 
 if __name__ == '__main__':
-    DataWorker.createTable()
-    app.run(debug=True, port=1034)
+    if DataWorker.createTable():
+        print('Database created or founded old')
+        app.run(debug=True, port=1034)
+    else:
+        print("CAN'T CREATE OR FIND DATABASE!")
+
+
