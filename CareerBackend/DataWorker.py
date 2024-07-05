@@ -46,7 +46,7 @@ def getMost():
         connection = sqlite3.connect('vacancies.db')
         cursor = connection.cursor()
 
-        data = cursor.execute("SELECT * FROM requests ORDER BY found ASC").fetchone()
+        data = cursor.execute("SELECT * FROM requests ORDER BY found DESC").fetchone()
 
         connection.commit()
         connection.close()
