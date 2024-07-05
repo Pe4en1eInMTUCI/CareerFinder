@@ -1,16 +1,24 @@
 import sqlite3
+import mysql.connector
 
 
 def createTable():
     try:
-        connection = sqlite3.connect('./vacancies.db')
+
+        connection = mysql.connector.connect(
+            host="http://mysql_database",
+            user='user',
+            password='1234',
+            database='CareerFinder'
+        )
+
         cursor = connection.cursor()
 
         cursor.execute('CREATE TABLE IF NOT EXISTS requests ('
-                       'requestText TEXT NOT NULL,'
-                       'schedule TEXT NOT NULL,'
-                       'experience TEXT NOT NULL,'
-                       'found INTEGER NOT NULL)')
+                       'requestText VARCHAR(255) NOT NULL,'
+                       'schedule VARCHAR(255) NOT NULL,'
+                       'experience VARCHAR(255) NOT NULL,'
+                       'found VARCHAR(255) NOT NULL)')
 
         connection.commit()
         connection.close()
@@ -30,10 +38,16 @@ def createRecord(name, sch, exp, found):
     found = int(found)
 
     try:
-        connection = sqlite3.connect('./vacancies.db')
+        connection = mysql.connector.connect(
+            host="http://mysql_database",
+            user='user',
+            password='1234',
+            database='CareerFinder'
+        )
+
         cursor = connection.cursor()
 
-        cursor.execute("INSERT INTO requests (requestText, schedule, experience, found) VALUES (?, ?, ?, ?)", (name, sch, exp, found))
+        cursor.execute("INSERT INTO requests (requestText, schedule, experience, found) VALUES (%s, %s, %s, %s)", (name, sch, exp, found))
 
         connection.commit()
         connection.close()
@@ -46,10 +60,18 @@ def createRecord(name, sch, exp, found):
 
 def getMost():
     try:
-        connection = sqlite3.connect('./vacancies.db')
+        connection = mysql.connector.connect(
+            host="http://mysql_database",
+            user='user',
+            password='1234',
+            database='CareerFinder'
+        )
+
         cursor = connection.cursor()
 
-        data = cursor.execute("SELECT * FROM requests ORDER BY found DESC").fetchone()
+        data = cursor.execute("SELECT * FROM requests ORDER BY found DESC")
+
+        print(data)
 
         connection.commit()
         connection.close()

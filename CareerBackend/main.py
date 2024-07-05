@@ -1,11 +1,8 @@
-import logging
-
 from flask import Flask, request
 import parser
 import DataWorker
 
 app = Flask("main")
-logger = logging.getLogger(__name__)
 
 @app.route('/')
 def root():
