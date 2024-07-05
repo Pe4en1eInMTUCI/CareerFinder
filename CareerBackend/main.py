@@ -3,7 +3,7 @@ from flask import Flask, request
 import parser
 import DataWorker
 
-app = Flask(__name__)
+app = Flask("main")
 
 @app.route('/')
 def root():

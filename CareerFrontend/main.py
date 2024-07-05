@@ -2,7 +2,7 @@ import requests
 from flask import Flask, request, render_template
 import random
 
-app = Flask(__name__)
+app = Flask("main")
 
 @app.route('/')
 def root():
@@ -21,17 +21,17 @@ def search():
     sch = request.args.get("schedule")
     exp = request.args.get("experience")
 
-    data = requests.get(f"http://127.0.0.1:8800/getVacancies?name={job}&experience={exp}&schedule={sch}").json()
+    data = requests.get(f"http://127.0.0.1:1034/getVacancies?name={job}&experience={exp}&schedule={sch}").json()
 
     return render_template('search.html', job=job, vacancies=data)
 
 @app.route('/stats')
 def stats():
 
-    data = requests.get("http://127.0.0.1:8800/getStats").json()
+    data = requests.get("http://127.0.0.1:1034/getStats").json()
 
 
     return render_template('stats.html', request=data[0], count=data[1])
 
 if __name__ == '__main__':
-    app.run(debug=True, port=1020)
+    app.run(debug=True)
