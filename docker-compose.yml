@@ -9,6 +9,8 @@ services:
     ports:
       - 1034:1034
     container_name: backend_service
+    depends_on:
+      - mysql
 
   frontend:  
     build: ./CareerFrontend
@@ -20,5 +22,25 @@ services:
     depends_on:
       - backend
     container_name: frontend_service
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: CareerFinder
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 1234
+    container_name: mysql_database
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - "9090:80"
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: 1234     
+    container_name: phpmyadmin 
+
+    
 
     
