@@ -7,7 +7,7 @@
 
 _p.s. Если нужна история коммитов их стоит искать там_
 
-_p.s.s [Если уже хочется пощупать](https://github.com/Pe4en1eInMTUCI/CareerFinder?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA)_
+_p.s.s [Если уже хочется пощупать](https://github.com/Pe4en1eInMTUCI/CareerFinder?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA) или [готовый веб](http://109.120.135.64:8080)_
 
 # CareerFinder - сервис для поиска вакансий
 
