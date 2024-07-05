@@ -25,9 +25,8 @@ _p.s. Если нужна история коммитов их стоит иск
 
 <img width="1512" alt="image" src="https://github.com/Pe4en1eInMTUCI/CareerFinder/assets/62511045/0281ac51-0aa4-4576-bc81-ee0485c3c4f1">
 
-<img width="1512" alt="image" src="https://github.com/Pe4en1eInMTUCI/CareerFinder/assets/62511045/c07071d6-f6db-4d5f-bdfe-53bcbc628d8a">
+<img width="1512" alt="image" src="https://github.com/Pe4en1eInMTUCI/CareerFinder/assets/62511045/df761f95-3359-490b-8ca0-45daa46c2d71">
 
-<img width="1512" alt="image" src="https://github.com/Pe4en1eInMTUCI/CareerFinder/assets/62511045/13035144-e69f-490c-8373-54af5ecbc4e0">
 
 
 
