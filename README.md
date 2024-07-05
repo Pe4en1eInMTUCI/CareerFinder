@@ -99,11 +99,10 @@ _Плейсхолдер все время разный чтоб было кра�
 # Запуск
 
 ```bash
-sudo apt install git
-sudo apt install docker
+sudo apt install git && install docker && install docker-compose
 git clone https://github.com/Pe4en1eInMTUCI/CareerFinder.git
 cd CareerFinder
-docker compose up --build
+docker-compose up --build
 ```
 
 
