@@ -23,9 +23,16 @@ _p.s. Если нужна история коммитов их стоит иск
 
 ### Более подробное описание прокта: 
 
-<img width="1512" alt="image" src="https://github.com/Pe4en1eInMTUCI/CareerFinder/assets/62511045/0281ac51-0aa4-4576-bc81-ee0485c3c4f1">
+## Проект поделен на два сервиса _CareerBackend_ и _CareerFrontend_. Каждый упакован в контейнер и запускается через docker compose
 
-<img width="1512" alt="image" src="https://github.com/Pe4en1eInMTUCI/CareerFinder/assets/62511045/df761f95-3359-490b-8ca0-45daa46c2d71">
+# CareerBackend
+
+### Реализован через Flask, бд - SQlite, получал вакансии при помощи API hh.ru
+
+Прописано три роута
+- / корневой, ничего не делает
+- /getVacancies GET, возвращает список вакансий по заданным параметрам
+- /getMost GET, возвращает информацию о запросе с самым большим кол-вом вакансий
 
 
 
