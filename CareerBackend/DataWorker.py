@@ -24,6 +24,9 @@ def createTable():
 
 def createRecord(name, sch, exp, found):
 
+    if name == '':
+        return 
+
     found = int(found)
 
     try:
