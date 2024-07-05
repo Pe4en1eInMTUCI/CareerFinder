@@ -21,14 +21,14 @@ def search():
     sch = request.args.get("schedule")
     exp = request.args.get("experience")
 
-    data = requests.get(f"http://127.0.0.1:1034/getVacancies?name={job}&experience={exp}&schedule={sch}").json()
+    data = requests.get(f"http://backend:1034/getVacancies?name={job}&experience={exp}&schedule={sch}").json()
 
     return render_template('search.html', job=job, vacancies=data)
 
 @app.route('/stats')
 def stats():
 
-    data = requests.get("http://127.0.0.1:1034/getStats").json()
+    data = requests.get("http://backend:1034/getStats").json()
 
 
     return render_template('stats.html', request=data[0], count=data[1])

@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./CareerBackend
+    command: gunicorn main:app -b 0.0.0.0:1034
+    volumes:
+      - ./CareerBackend:/CareerFinder/backend
+    ports:
+      - 1034:1034
+    container_name: backend_service
+
+  frontend:  
+    build: ./CareerFrontend
+    command: gunicorn main:app -b 0.0.0.0:1020
+    volumes:
+      - ./CareerFrontend:/CareerFinder/frontend
+    ports:
+      - 80:1020
+    depends_on:
+      - backend
+    container_name: frontend_service
+
+    
