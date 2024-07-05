@@ -1,0 +1,343 @@
+@font-face {
+    font-family: 'HarmonyOS Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Regular'), url('../fonts/HarmonyOS_Sans_Regular.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Italic'), url('../fonts/HarmonyOS_Sans_Regular_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Thin'), url('../fonts/HarmonyOS_Sans_Thin.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Thin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Thin Italic'), url('../fonts/HarmonyOS_Sans_Thin_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Light'), url('../fonts/HarmonyOS_Sans_Light.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Light Italic'), url('../fonts/HarmonyOS_Sans_Light_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Medium'), url('../fonts/HarmonyOS_Sans_Medium.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Medium Italic'), url('../fonts/HarmonyOS_Sans_Medium_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Bold'), url('../fonts/HarmonyOS_Sans_Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Bold Italic'), url('../fonts/HarmonyOS_Sans_Bold_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Black'), url('../fonts/HarmonyOS_Sans_Black.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Black Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Black Italic'), url('../fonts/HarmonyOS_Sans_Black_Italic.woff') format('woff');
+    }
+
+
+html{
+    box-sizing: border-box;
+	font-family: 'HarmonyOS Sans Regular';
+    color: #fff;
+    background: #000;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+
+.wrapper{
+	max-width: 1050px;
+	margin: 0 auto;
+}
+
+.upperSearch {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+
+    background: #111111;
+}
+
+.searchField {
+    height: 100px;
+    width: 100%;
+}
+
+.searchForm {
+
+    height: 100%;
+    width: 900px;
+
+    margin-left: 75px;
+
+    align-items: center;
+    display: flex;
+
+}
+
+.jobName {
+
+    font-family: 'HarmonyOs Sans Regular';
+
+    height: 50px;
+    width: 400px;
+    
+    font-size: 20px;
+    border-radius: 15px 0px 0px 15px;
+    border: 0px;
+    background-color: #383838;
+    padding-left: 20px;
+    color: #fff;
+    border-right: 2px #000000 solid;
+}
+
+.jobSchedule {
+
+    font-family: 'HarmonyOs Sans Regular';
+
+    height: 50px;
+    width: 200px;
+    
+    font-size: 20px;
+    border: 0;
+    background-color: #383838;
+    color: #fff;
+
+    padding: 10px;
+
+    border-right: 2px #000000 solid;
+
+}
+
+.jobExp {
+
+    font-family: 'HarmonyOs Sans Regular';
+
+    height: 50px;
+    width: 180px;
+    
+    font-size: 20px;
+    border: 0;
+    background-color: #383838;
+    color: #fff;
+
+    padding: 10px;
+
+    border-radius: 0px 15px 15px 0px;
+
+}
+
+.findBtn {
+    margin-left: 20px;
+
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #383838;
+    transition: 0.5s;
+}
+
+.arrowImg {
+    height: 20px;
+}
+
+.findBtn:hover {
+    transition: 0.5s;
+    border-radius: 17px;
+    background-color: #88EE92;
+}
+
+.vacancies {
+    padding-top: 120px;
+    align-items: center;
+    display: flex;
+}
+
+.vacCard {
+    height: 300px;
+    width: 700px;
+    border-radius: 20px;
+    background-color: #111;
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-left: 25px;
+    transition: 0.3s;
+}
+
+.vacCard:hover {
+    background-color: #1f1e1e;
+    transition: 0.3s;
+}
+
+.vacInfo {
+    display: flex;
+    height: 250px;
+    width: 650px;
+}
+
+.vacDesc {
+    width: 600px;
+    height: 250px;
+    margin-left: 30px;
+}
+
+.vacTitle {
+    font-family: 'HarmonyOs Sans Bold';
+    font-size: 26px;
+}
+
+.vacArea {
+    margin-top: 12px;
+    font-family: 'HarmonyOs Sans Regular';
+    font-size: 16px;
+}
+
+.lowerInfo {
+    margin-top: 30px;
+    display: flex;
+}
+
+
+.vacDescription {
+    margin-top: 15px;
+    font-family: 'HarmonyOs Sans Medium';
+    font-size: 20px;
+}
+
+.openVacBtn {
+    height: 40px;
+    width: 140px;
+    display: flex;
+    text-align: center;
+    background: #383838;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.linkTo {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'HarmonyOs Sans Bold';
+    font-size: 20px;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+.openVacBtn:hover {
+    background-color: #88EE92;
+    transition: 0.5s;
+}
+
+.vacSalary {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    font-family: 'HarmonyOs Sans Black';
+    font-size: 20px;
+}
+
+
+.footer {
+
+
+    margin-top: calc(100vh - 80px);
+
+    width: 100%;
+    height: 80px;
+
+    background-color: #111111;
+
+    padding-top: 20px;
+    text-align: center;
+    line-height: 20px;
+
+}
+
+.nothingFound {
+
+    width: 600px;
+    height: 400px;
+    text-align: center;
+
+    margin-top: 40px;
+}
+
+.NFtext {
+
+    font-family: 'HarmonyOs Sans Black';
+    font-size: 30px;
+
+}
+
+.NFsug {
+
+    margin-top: 10px;
+    font-family: 'HarmonyOs Sans Medium';
+    font-size: 26px
+
+}

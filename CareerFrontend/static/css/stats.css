@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'HarmonyOS Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Regular'), url('../fonts/HarmonyOS_Sans_Regular.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Italic'), url('../fonts/HarmonyOS_Sans_Regular_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Thin'), url('../fonts/HarmonyOS_Sans_Thin.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Thin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Thin Italic'), url('../fonts/HarmonyOS_Sans_Thin_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Light'), url('../fonts/HarmonyOS_Sans_Light.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Light Italic'), url('../fonts/HarmonyOS_Sans_Light_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Medium'), url('../fonts/HarmonyOS_Sans_Medium.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Medium Italic'), url('../fonts/HarmonyOS_Sans_Medium_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Bold'), url('../fonts/HarmonyOS_Sans_Bold.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Bold Italic'), url('../fonts/HarmonyOS_Sans_Bold_Italic.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Black'), url('../fonts/HarmonyOS_Sans_Black.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'HarmonyOS Sans Black Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('HarmonyOS Sans Black Italic'), url('../fonts/HarmonyOS_Sans_Black_Italic.woff') format('woff');
+    }
+
+
+html{
+    box-sizing: border-box;
+	font-family: 'HarmonyOS Sans Regular';
+    color: #fff;
+    background: url('../images/bg.png') no-repeat fixed;
+    background-size: cover;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+
+    overflow-y: hidden;
+}
+
+
+.wrapper{
+	max-width: 1050px;
+	margin: 0 auto;
+}
+
+
+.footer {
+
+    margin-top: 230px;
+
+    width: 100%;
+    height: 80px;
+
+    background-color: #111111;
+
+    padding-top: 20px;
+    text-align: center;
+    line-height: 20px;
+
+}
+
+.stats{
+    align-items: center;
+    display: flex;
+}
+
+.statsBlock {
+
+    margin-top: 150px;
+
+    height: 500px;
+    width: 1000px;
+
+
+    text-align: center;
+
+}
+
+.mainText {
+
+    font-family: 'HarmonyOS Sans Medium';
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+}
+
+.accent {
+
+    font-family: 'HarmonyOS Sans Black';
+    font-size: 24px;
+
+    color: #3bb490;
+
+}
+
+.mostLabel{
+
+    font-family: 'HarmonyOS Sans Medium';
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.found {
+    font-family: 'HarmonyOS Sans Medium';
+    font-size: 24px;
+
+    margin-bottom: 100px;
+
+}
+
+.goToMain {
+
+    font-size: 26px;
+    font-family: 'HarmonyOS Sans Black';
+    color: #fff;
+
+
+    transition: 0.3s;
+    text-decoration: none;
+
+}
+
+
+.goToMain:hover {
+
+    font-size: 26px;
+    font-family: 'HarmonyOS Sans Black';
+    color: #3bb490;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+}

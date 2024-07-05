@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerFinder | {{ job }}</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/search.css">
+    <link rel="icon" href="../static/images/favicon.svg">
+</head>
+<body>
+
+    <section class="upperSearch">
+        <div class="wrapper">
+            <div class="searchField">
+                <div class="searchField">
+                    <form action="/search" class="searchForm">
+                        <input class="jobName" placeholder="Например... {{ randomJob }} {{ randomCity }}" type="text" name="job" value="{{ job }}">
+                        <select class="jobSchedule" name="schedule">
+                            <option value="None" class="option">Не важно</option>
+                            <option value="fullDay" class="option">Полный день</option>
+                            <option value="shift" class="option">Сменный график</option>
+                            <option value="flexible" class="option">Гибкий график</option>
+                            <option value="remote" class="option">Удаленно</option>
+                            <option value="flyInFlyOut" class="option">Вахта</option>
+                        </select>
+                        <select class="jobExp" name="experience">
+                            <option value="noExperience" class="option">Без опыта</option>
+                            <option value="between1And3" class="option">От года до 3</option>
+                            <option value="between3And6" class="option">От 3 до 6</option>
+                            <option value="moreThan6" class="option">Более 6</option>
+                        </select>
+                        <button class="findBtn">
+                            <img src="../static/images/arrow.svg" class="arrowImg">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="vacancies">
+        <div class="wrapper">
+
+            {% for vacancy in vacancies %}
+
+            <div class="vacCard">
+                <div class="vacInfo">
+                    <div class="vacDesc">
+                        <h1 class="vacTitle">{{ vacancy['name'] }}</h1>
+                        <h1 class="vacArea">{{ vacancy['area'] }}</h1>
+                        <h1 class="vacDescription">{{ vacancy['requirement'] }}</h1>
+                        <div class="lowerInfo">
+                            <div class="openVacBtn">
+                                <a href="{{ vacancy['url'] }}" class="linkTo">
+                                    Подробнее
+                                </a>
+                            </div>
+                            <h1 class="vacSalary">{{ vacancy['salary'] }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {% endfor %}
+
+            {% if vacancies|length == 0 %}
+
+            <div class="nothingFound">
+                <h1 class="NFtext">Упс... Похоже ничего не нашлось 😥</h1>
+                <h1 class="NFsug">Попробуйте другие параметры поиска</h1>
+            </div>
+
+            {% endif %}
+
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="wrapper">
+            Вакансии получены при помощи https://api.hh.ru <br>
+            Дубровин Александр БВТ2304. Учебная практика 2024 год
+        </div>
+    </section>
+
+</body>
+</html>

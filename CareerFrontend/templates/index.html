@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerFinder</title>
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" href="../static/images/favicon.svg">
+</head>
+<body>
+    
+    <section class="main">
+        <div class="wrapper">
+            <div class="searchArea">
+                <div class="mainText">
+                    <h1 class="upperText">Миллионы вакансий...</h1>
+                    <h1 class="lowerText">...и все в <a class="accent">одном</a> месте!</h1>
+                </div>
+
+                <div class="searchField">
+                    <form action="/search" class="searchForm">
+                        <input required class="jobName" placeholder="Например... {{ randomJob }} {{ randomCity }}" type="text" name="job">
+                        <select class="jobSchedule" name="schedule">
+                            <option value="None" class="option">Не важно</option>
+                            <option value="fullDay" class="option">Полный день</option>
+                            <option value="shift" class="option">Сменный график</option>
+                            <option value="flexible" class="option">Гибкий график</option>
+                            <option value="remote" class="option">Удаленно</option>
+                            <option value="flyInFlyOut" class="option">Вахта</option>
+                        </select>
+                        <select class="jobExp" name="experience">
+                            <option value="noExperience" class="option">Без опыта</option>
+                            <option value="between1And3" class="option">От года до 3</option>
+                            <option value="between3And6" class="option">От 3 до 6</option>
+                            <option value="moreThan6" class="option">Более 6</option>
+                        </select>
+                        <button class="findBtn">
+                            <img src="../static/images/arrow.svg" class="arrowImg">
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
