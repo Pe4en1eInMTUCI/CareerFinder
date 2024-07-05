@@ -92,6 +92,19 @@ _Плейсхолдер все время разный чтоб было кра�
 
 Просто страница где написан запрос с самым большим кол-вом вакансий, ничего более
 
+***
+
+# Запуск
+
+```bash
+sudo apt install git
+sudo apt install docker
+[gut clone](https://github.com/Pe4en1eInMTUCI/CareerFinder.git)
+cd CareerFinder
+docker compose up --build
+```
+
+
 
 
 
