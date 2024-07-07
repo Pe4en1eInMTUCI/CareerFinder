@@ -19,6 +19,19 @@
                 <a href="/" class="goToMain">Круто! А теперь на главную...</a>
             </div>
 
+            <div class="allStatsBlock">
+                <h1 class="allStatsText">Полная статистика</h1>
+
+                {% for v in vacs %}
+
+                    <div class="statsCard">
+                        <h1 class="statCardText">{{v[0]}}</h1>
+                        <h1 class="statCardFound">Найдено: {{v[1]}} </h1>
+                    </div>
+
+                {% endfor %}
+
+            </div>
 
         </div>
     </section>

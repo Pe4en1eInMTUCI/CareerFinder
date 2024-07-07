@@ -29,9 +29,10 @@ def search():
 def stats():
 
     data = requests.get("http://backend:1034/getStats").json()
+    vacs = requests.get("http://backend:1034/getAll").json()
 
 
-    return render_template('stats.html', request=data[0], count=data[1])
+    return render_template('stats.html', request=data[0], count=data[1], vacs=vacs)
 
 if __name__ == '__main__':
     app.run(debug=True)

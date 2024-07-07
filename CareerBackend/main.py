@@ -23,5 +23,9 @@ def getStats():
     return DataWorker.getMost()
 
 
+@app.route('/getAll')
+def getAll():
+    return DataWorker.getAll()
+
 
 

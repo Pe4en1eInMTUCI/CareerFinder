@@ -98,13 +98,11 @@ html{
     box-sizing: border-box;
 	font-family: 'HarmonyOS Sans Regular';
     color: #fff;
-    background: url('../images/bg.png') no-repeat fixed;
+    background: #000;
     background-size: cover;
 }
 *,*::before,*::after{
     box-sizing: inherit;
-
-    overflow-y: hidden;
 }
 
 
@@ -202,6 +200,62 @@ html{
     color: #3bb490;
 
     text-decoration: none;
+
+    transition: 0.3s;
+
+}
+
+.allStatsBlock {
+    text-align: center;
+}
+
+.allStatsText {
+    font-size: 26px;
+    font-family: 'HarmonyOS Sans Black';
+
+    margin-bottom: 40px;
+    
+}
+
+.statsCard {
+
+    margin-left: 100px;
+
+    height: 80px;
+    width: 800px;
+
+    border: 1px #fff solid;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 24px;
+
+    transition: 0.3s;
+
+    margin-top: 20px;
+
+}
+
+.statCardText {
+
+    text-align: left;
+    width: 560px;
+    margin-left: 20px;
+
+}
+
+.statCardFound {
+
+    font-family: 'HarmonyOS Sans Bold';
+
+}
+
+.statsCard:hover{
+
+    background: #fff;
+    color: #000;
 
     transition: 0.3s;
 
